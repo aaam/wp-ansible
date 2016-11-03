@@ -1,0 +1,6 @@
+---
+- name: Install wp-cli
+  command: curl https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar -o /usr/local/bin/wp
+  
+- name: Add execute bit to wp-cli
+  file: dest=/usr/local/bin/wp group=root owner=root mode=0755 state=file
